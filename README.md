@@ -169,7 +169,8 @@ The app encourages users to:
 - Firefox 75+
 - Safari 13+
 - Edge 80+
-
+## Deployed 
+https://choice-love-pukmpi1oc-saptami-tithis-projects.vercel.app/
 ## 🤝 Contributing
 
 This project celebrates the beauty of love through shared values. Contributions that honor this philosophy are welcome!
