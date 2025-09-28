@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choice-Based Love</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💚 Choice-Based Love</h1>
+    <div class="philosophy-intro">
+      <p class="main-question">Can love happen through shared choices, values, and thoughts - without photos or small talk?</p>
+      <div class="philosophy-quote">
+        <p>"Love is not just about who you talk to, but who you understand without speaking."</p>
+        <p class="quote-subtitle">Connect through shared art, music, life goals, and cultural respect</p>
+      </div>
+    </div>
+    
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <span class="progress-text" id="progressText">Question 1 of 8</span>
+    </div>
+
+    <form id="quizForm">
+      <div class="question-group">
+        <label>Your Profile:</label>
+        <div class="profile-section">
+          <div class="profile-input">
+            <input type="text" name="name" placeholder="Your name (optional)" class="profile-input-field">
+          </div>
+          <div class="profile-input">
+            <input type="number" name="age" placeholder="Age (optional)" class="profile-input-field" min="18" max="100">
+          </div>
+          <div class="profile-input">
+            <input type="text" name="location" placeholder="City, Country (optional)" class="profile-input-field">
+          </div>
+          <div class="profile-input">
+            <input type="email" name="email" placeholder="Email (for match notifications)" class="profile-input-field" required>
+          </div>
+          <p class="profile-hint">💫 Your profile helps others understand you better, but your values matter most</p>
+          <p class="email-hint">📧 Email notifications will alert you when someone new matches with you!</p>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>Favorite Art:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="art" value="Painting">
+            <span>Painting</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="art" value="Dance">
+            <span>Dance</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="art" value="Music">
+            <span>Music</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="art" value="Poetry">
+            <span>Poetry</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>Music Taste:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="music" value="Classical">
+            <span>Classical</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="music" value="Pop">
+            <span>Pop</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="music" value="Rock">
+            <span>Rock</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="music" value="Hip-Hop">
+            <span>Hip-Hop</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>Life Goal:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="life_goal" value="Wealth">
+            <span>Wealth</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="life_goal" value="Happiness">
+            <span>Happiness</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="life_goal" value="Knowledge">
+            <span>Knowledge</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="life_goal" value="Adventure">
+            <span>Adventure</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>Family Values:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="family" value="Always respect elders">
+            <span>Always respect elders</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="family" value="Independence first">
+            <span>Independence first</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>Cultural Respect:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="culture" value="Preserve traditions">
+            <span>Preserve traditions</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="culture" value="Adapt modern culture">
+            <span>Adapt modern culture</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>Travel Style:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="travel" value="Adventure">
+            <span>Adventure & exploration</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="travel" value="Relaxation">
+            <span>Relaxation & beaches</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="travel" value="Cultural">
+            <span>Cultural experiences</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="travel" value="Solo">
+            <span>Solo adventures</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>Communication Style:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="communication" value="Direct">
+            <span>Direct and honest</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="communication" value="Diplomatic">
+            <span>Diplomatic and careful</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="communication" value="Emotional">
+            <span>Emotional and expressive</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="communication" value="Logical">
+            <span>Logical and analytical</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>Relationship Goals:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="relationship_goals" value="Marriage">
+            <span>Marriage and family</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="relationship_goals" value="Long-term">
+            <span>Long-term partnership</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="relationship_goals" value="Casual">
+            <span>Casual dating</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="relationship_goals" value="Friends">
+            <span>Friends first</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>Lifestyle Preferences:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="lifestyle" value="Early bird">
+            <span>Early bird</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="lifestyle" value="Night owl">
+            <span>Night owl</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="lifestyle" value="Introvert">
+            <span>Introvert</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="lifestyle" value="Extrovert">
+            <span>Extrovert</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="lifestyle" value="Planner">
+            <span>Planner</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="lifestyle" value="Spontaneous">
+            <span>Spontaneous</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>Share Your Thoughts (Optional):</label>
+        <div class="thought-sharing">
+          <textarea name="thoughts" placeholder="Share what's on your mind... Your thoughts, dreams, or reflections. Let your soul speak through words." rows="4"></textarea>
+          <p class="thought-hint">💭 Your thoughts help others understand your soul beyond just preferences</p>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>Cultural Respect & Family Values:</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="cultural_values" value="Elder respect is sacred">
+            <span>Elder respect is sacred and non-negotiable</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="cultural_values" value="Family comes first">
+            <span>Family comes first, always</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="cultural_values" value="Cultural traditions matter">
+            <span>Cultural traditions and heritage matter deeply</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="cultural_values" value="Teach values to children">
+            <span>Important to teach these values to future children</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label>Match Preferences:</label>
+        <div class="preferences-section">
+          <div class="preference-row">
+            <label>Age Range:</label>
+            <select name="age_preference" class="preference-select">
+              <option value="any">Any age</option>
+              <option value="18-25">18-25</option>
+              <option value="26-35">26-35</option>
+              <option value="36-45">36-45</option>
+              <option value="46+">46+</option>
+            </select>
+          </div>
+          <div class="preference-row">
+            <label>Minimum Compatibility:</label>
+            <select name="min_compatibility" class="preference-select">
+              <option value="0">Any compatibility</option>
+              <option value="60">60%+ (Good match)</option>
+              <option value="70">70%+ (Great match)</option>
+              <option value="80">80%+ (Excellent match)</option>
+              <option value="90">90%+ (Perfect match)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" id="submitBtn">Find My Soul Match 💘</button>
+    </form>
+    
+    <!-- Show Check Matches Button -->
+    <div class="check-matches-toggle">
+      <button type="button" id="showCheckMatchesBtn" class="toggle-btn">🔍 Check Existing Matches</button>
+    </div>
+
+    <div id="results"></div>
+    
+    <!-- Check Existing Matches Section -->
+    <div id="check-matches-section" style="display: none;">
+      <div class="question-group">
+        <label>🔍 Check Your Existing Matches:</label>
+        <div class="check-matches-form">
+          <p class="check-hint">Enter your User ID to see your current matches and any new ones!</p>
+          <div class="user-id-input">
+            <input type="text" id="userIdInput" placeholder="Enter your User ID (e.g., user_1642234567_abc123)" class="profile-input-field">
+            <button type="button" id="checkMatchesBtn" class="check-btn">Check My Matches 💕</button>
+          </div>
+          <p class="user-id-hint">💡 Your User ID was shown when you first submitted your quiz</p>
+        </div>
+      </div>
+    </div>
+    
+    <div id="advanced-features" style="display: none;">
+      <div class="features-section">
+        <h3>🌟 Advanced Features</h3>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h4>💕 Favorites</h4>
+            <p>Save your favorite matches</p>
+            <button class="feature-btn" onclick="showFavorites()">View Favorites</button>
+          </div>
+          <div class="feature-card">
+            <h4>💬 Messages</h4>
+            <p>Connect with your matches</p>
+            <button class="feature-btn" onclick="showMessages()">View Messages</button>
+          </div>
+          <div class="feature-card">
+            <h4>📊 Compatibility</h4>
+            <p>Detailed analysis</p>
+            <button class="feature-btn" onclick="showDetailedAnalysis()">View Analysis</button>
+          </div>
+          <div class="feature-card">
+            <h4>🎯 Refine Search</h4>
+            <p>Adjust your preferences</p>
+            <button class="feature-btn" onclick="showRefineOptions()">Refine Matches</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
